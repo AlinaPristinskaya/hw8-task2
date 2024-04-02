@@ -1,4 +1,3 @@
-
 // Define the hide function
 function hide(location) {
   // Store the hiding location in a local variable
@@ -6,8 +5,8 @@ function hide(location) {
 
   // Define the seek function inside the hide function
   function seek() {
-      // Return the hidden location
-      return hideLocation;
+    // Return the hidden location
+    return hideLocation;
   }
 
   // Return the seek function, creating a closure around hideLocation
@@ -22,8 +21,6 @@ console.log(startGame()); // This should print "Under the big oak tree"
 
 // Try logging hideLocation directly from outside of the hide and seek functions
 console.log(hideLocation); // This will result in a ReferenceError because hideLocation is not defined in this scope
-
-
 
 // The hide function creates a closure by returning the seek function, which retains access to the hideLocation variable even after the hide function has finished executing.
 // However, hideLocation is defined within the scope of the hide function and is not accessible outside of it.
